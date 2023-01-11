@@ -1,7 +1,7 @@
 import streamlit as st
 import functions
 
-todos = functions.get_todos("../todos.txt")
+todos = functions.get_todos("todos.txt")
 
 def add_todo():
     todo = st.session_state['new_todo'] + "\n"
@@ -9,7 +9,7 @@ def add_todo():
     functions.write_todos(todos)
 
 
-todos = functions.get_todos("../todos.txt")
+todos = functions.get_todos("todos.txt")
 
 st.title("My To-do App")
 st.subheader("This is my todo app.")
